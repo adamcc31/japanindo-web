@@ -10,6 +10,7 @@ interface BreadcrumbItem {
 
 const pathLabels: Record<string, string> = {
     order: "Pemesanan",
+    "privacy-policy": "Kebijakan Privasi",
 };
 
 export default function Breadcrumb() {

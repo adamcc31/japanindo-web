@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { COMPANY_ADDRESS } from "@/lib/constants";
 
 export default function Footer() {
   return (
@@ -95,7 +96,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/#faq" className="hover:text-primary transition">
+                <Link href="/privacy-policy" className="hover:text-primary transition">
                   Kebijakan Privasi
                 </Link>
               </li>
@@ -116,10 +117,7 @@ export default function Footer() {
                 <span className="material-icons-round text-primary flex-shrink-0">
                   location_on
                 </span>
-                <span>
-                  Operational Office : RRG 5 Nomor 9 (Lantai 1)
-                  Bekasi Selatan, Jawa Barat, Indonesia
-                </span>
+                <span>{COMPANY_ADDRESS}</span>
               </li>
               <li className="flex gap-4">
                 <a href="https://wa.me/6282228487080?text=Halo%20Admin%20Japanindo%2C%20saya%20ingin%20bertanya%20seputar%20Layanan%20JP%20Smart%20Sim" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition">
@@ -148,7 +146,7 @@ export default function Footer() {
             </span>
           </p>
           <div className="flex space-x-6">
-            <Link href="/#faq" className="hover:text-primary transition">
+            <Link href="/privacy-policy" className="hover:text-primary transition">
               Privacy Policy
             </Link>
             <Link href="/#faq" className="hover:text-primary transition">
