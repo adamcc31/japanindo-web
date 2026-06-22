@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 import Breadcrumb from "@/components/layout/Breadcrumb";
-// REVISI: Hapus import Image karena tidak dipakai
-// import Image from "next/image"; 
 
 export default function OrderPage() {
     const [formData, setFormData] = useState({
@@ -22,7 +20,6 @@ export default function OrderPage() {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
-        // REVISI: Gunakan Template Literal bersih tanpa manual encoding (%0A) di dalam variabel
         const rawMessage = `Halo Admin, saya ingin memesan JP Smart Sim. Berikut data saya:
 
 1. Nama: ${formData.nama}
@@ -33,7 +30,6 @@ export default function OrderPage() {
 
 Mohon dibantu proses selanjutnya. Terima kasih.`;
 
-        // REVISI: Encode seluruh pesan agar aman dari karakter spesial
         const encodedMessage = encodeURIComponent(rawMessage);
         const whatsappUrl = `https://wa.me/6282228487080?text=${encodedMessage}`;
 
@@ -119,7 +115,6 @@ Mohon dibantu proses selanjutnya. Terima kasih.`;
                                     <option value="DATA SIM">DATA SIM (Data Only)</option>
                                     <option value="PREPAID SIM">PREPAID SIM (Travel)</option>
                                 </select>
-                                {/* Pastikan font Material Icons sudah diload di layout global */}
                                 <span className="material-icons-round absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none">
                                     expand_more
                                 </span>

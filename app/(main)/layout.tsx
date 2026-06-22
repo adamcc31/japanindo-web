@@ -5,7 +5,7 @@ import Script from "next/script";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 
-import "./globals.css";
+import "../globals.css";
 
 const rubik = Rubik({
   subsets: ["latin"],
@@ -120,5 +120,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-
